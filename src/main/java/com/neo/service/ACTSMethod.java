@@ -13,9 +13,7 @@ import java.util.ArrayList;
 public class ACTSMethod {
   public static void generateModelFile(CTModel model){
     StringBuffer res = new StringBuffer("[System]\nName:s1\n[Parameter]\n");
-    int parameter = model.getParameter();
-    int strength = model.getStrength();
-    int[] values = model.getValues();
+	int[] values = model.getValues();
     for (int i = 0; i < values.length; i++) {
       res.append("p" + (i + 1) + "(int):");
       for (int j = 0; j < values[i]; j++) {
@@ -25,6 +23,17 @@ public class ACTSMethod {
 	  }
 	  res.append("\n");
 	}
+	res.append("[Constraint]\n");
+	ArrayList<String> constraint = model.getConstraint();
+    int[] valueSum = new int[values.length];
+    valueSum[0] = 0;
+    for(int i = 1; i < valueSum.length; i++)
+      valueSum[i] = valueSum[i - 1] + values[i - 1];
+    for(int i = 0; i < constraint.size(); i++){
+      res.append(transfer(constraint.get(i), valueSum));
+      res.append("\n");
+	}
+
 	try {
 	  File file = new File("./ACTS/model.txt");
 	  if (!file.exists()) {
@@ -53,6 +62,33 @@ public class ACTSMethod {
 	  e.printStackTrace();
 	}
 	return res;
+  }
+
+  public static String transfer(String constraint, int[] valueSum){
+    StringBuffer sb = new StringBuffer();
+    String[] split = constraint.split(" - ");
+    split[0] = split[0].substring(2, split[0].length());
+    int[] tmp = new int[split.length];
+    for(int i = 0; i < tmp.length; i++)
+      tmp[i] = Integer.parseInt(split[i]);
+    int i = 0, j = 0;
+    while(i < tmp.length){
+      while (j < valueSum.length && tmp[i] >= valueSum[j])
+		j++;
+      split[i] = "p" + j + "=" + (tmp[i] - valueSum[j - 1]);
+      i++;
+	}
+	for(i = 0; i < split.length; i++){
+      String tmpString = "";
+      for(j = 0; j < split.length; j++){
+        if(i != j)
+          tmpString += (split[j] + "&&");
+	  }
+      tmpString = tmpString.substring(0, tmpString.length() - 2);
+	  tmpString += "=>" + split[i].substring(0,split[i].indexOf('=')) + "!" + split[i].substring(split[i].indexOf('='), split[i].length());
+	  sb.append(tmpString + "\n");
+	}
+    return sb.toString();
   }
 
   public static TestSuite transferTestsuite(String filePath){
@@ -86,9 +122,16 @@ public class ACTSMethod {
 
 
   public static void  main(String[] args){
-    //generateModelFile(new CTModel(3, new int[]{2, 2, 2}));
-	//runACTS("model.txt", 2);
-	TestSuite testSuite = transferTestsuite("ACTS/result.txt");
+    ArrayList<String> constraint = new ArrayList<>();
+    constraint.add("- 0 - 2");
+    constraint.add("- 1 - 4");
+    int[] values = new int[3];
+    values[0] = 2;
+    values[1] = 2;
+    values[2] = 2;
+    generateModelFile(new CTModel(3, 2, values, constraint));
+	runACTS("ACTS/model.txt", 2);
+	//TestSuite testSuite = transferTestsuite("ACTS/result.txt");
 	//System.out.println(new JSONbject(testSuite).toString());
   }
 }

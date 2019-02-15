@@ -1,6 +1,13 @@
 [System]
 Name:s1
 [Parameter]
-p1(int):0,1,2
-p2(int):0,1,2
-p3(int):0,1,2
+p1(int):0,1
+p2(int):0,1
+p3(int):0,1
+[Constraint]
+p2=0=>p1!=0
+p1=0=>p2!=0
+
+p3=0=>p1!=0
+p1=0=>p3!=0
+

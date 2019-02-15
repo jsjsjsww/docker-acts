@@ -1,80 +1,48 @@
-# ACTS Test Suite Generation: Sat Feb 02 16:03:06 CST 2019
+# ACTS Test Suite Generation: Fri Feb 15 10:52:14 CST 2019
 #  "(don't care)" represents don't care value 
 # Degree of interaction coverage: 2
 # Number of parameters: 3
-# Maximum number of values per parameter: 3
-# Number of configurations: 9
+# Maximum number of values per parameter: 2
+# Number of configurations: 5
 ------------Test Cases--------------
 
 Configuration #1:
 
 1 = p1=0
-2 = p2=0
+2 = p2=1
 3 = p3=1
 
 -------------------------------------
 
 Configuration #2:
 
-1 = p1=0
-2 = p2=1
-3 = p3=2
+1 = p1=1
+2 = p2=0
+3 = p3=0
 
 -------------------------------------
 
 Configuration #3:
 
-1 = p1=0
-2 = p2=2
-3 = p3=0
+1 = p1=1
+2 = p2=1
+3 = p3=1
 
 -------------------------------------
 
 Configuration #4:
 
 1 = p1=1
-2 = p2=0
-3 = p3=2
+2 = p2=1
+3 = p3=0
 
 -------------------------------------
 
 Configuration #5:
 
 1 = p1=1
-2 = p2=1
-3 = p3=0
-
--------------------------------------
-
-Configuration #6:
-
-1 = p1=1
-2 = p2=2
-3 = p3=1
-
--------------------------------------
-
-Configuration #7:
-
-1 = p1=2
 2 = p2=0
-3 = p3=0
-
--------------------------------------
-
-Configuration #8:
-
-1 = p1=2
-2 = p2=1
 3 = p3=1
-
--------------------------------------
-
-Configuration #9:
-
-1 = p1=2
-2 = p2=2
-3 = p3=2
 
 -------------------------------------
 
