@@ -129,7 +129,9 @@ public class ACTSMethod {
     values[0] = 2;
     values[1] = 2;
     values[2] = 2;
-    generateModelFile(new CTModel(3, 2, values, constraint));
+    ArrayList<int[]> seed = new ArrayList<>();
+    ArrayList<int[]> relation = new ArrayList<>();
+    generateModelFile(new CTModel(3, 2, values, constraint, seed, relation));
 	runACTS("ACTS/model.txt", 2);
 	//TestSuite testSuite = transferTestsuite("ACTS/result.txt");
 	//System.out.println(new JSONbject(testSuite).toString());

@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
@@ -55,7 +54,7 @@ public class DockerController {
         for(int i = 0; i < constraintList.size(); i++){
             constraint.add((String)constraintList.get(i));
         }
-        CTModel model = new CTModel(parameters, strength, values, constraint);
+        CTModel model = new CTModel(parameters, strength, values, constraint, new ArrayList<int[]>(), new ArrayList<>());
         ACTSMethod.generateModelFile(model);
         long time = ACTSMethod.runACTS("ACTS/model.txt", strength);
         TestSuite ts = ACTSMethod.transferTestsuite("ACTS/result.txt");
