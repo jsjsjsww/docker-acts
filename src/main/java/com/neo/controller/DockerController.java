@@ -57,8 +57,8 @@ public class DockerController {
         }
         CTModel model = new CTModel(parameters, strength, values, constraint, new ArrayList<int[]>(), new ArrayList<>());
         ACTSMethod.generateModelFile(model);
-        long time = ACTSMethod.runACTS("ACTS/model.txt", strength);
-        TestSuite ts = ACTSMethod.transferTestsuite("ACTS/result.txt");
+        long time = ACTSMethod.runACTS("./ACTS/model.txt", strength);
+        TestSuite ts = ACTSMethod.transferTestsuite("./ACTS/result.txt");
         ts.setTime(time);
         return ts;
     }

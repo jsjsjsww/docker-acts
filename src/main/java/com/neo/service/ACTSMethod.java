@@ -50,7 +50,7 @@ public class ACTSMethod {
 
   public static long runACTS(String modelFile, int strength){
 	System.out.println(System.getProperty("user.dir"));
-	String command = "java -Ddoi=" + strength + " -jar ACTS/acts_3.0.jar " + modelFile + " ACTS/result.txt";
+	String command = "java -Ddoi=" + strength + " -jar ./ACTS/acts_3.0.jar " + modelFile + " ./ACTS/result.txt";
 	Runtime runtime = Runtime.getRuntime();
 	long res = 0;
 	try{
