@@ -5,6 +5,7 @@ import com.neo.domain.TestSuite;
 import com.neo.service.ACTSMethod;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,10 +19,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/generation")
+//@RequestMapping("/generation")
 public class DockerController {
 	
-    @RequestMapping(value = "/ACTS", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
+    @RequestMapping(value = "", method = RequestMethod.POST, produces = "application/json;charset=UTF-8")
     // ACTS 3.0 version
     public TestSuite ACTSGeneration(HttpServletRequest request) {
         BufferedReader br;
@@ -60,5 +61,10 @@ public class DockerController {
         TestSuite ts = ACTSMethod.transferTestsuite("ACTS/result.txt");
         ts.setTime(time);
         return ts;
+    }
+
+    @GetMapping("/check")
+    public String healthCheck(){
+        return "ok";
     }
 }
