@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5efe043a-a8bc-4026-af8d-01eb75415d6a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/neo/config/CORSConfiguration.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/docker/Dockerfile" afterPath="$PROJECT_DIR$/src/main/docker/Dockerfile" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/neo/controller/DockerController.class" afterPath="$PROJECT_DIR$/target/classes/com/neo/controller/DockerController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/neo/service/ACTSMethod.class" afterPath="$PROJECT_DIR$/target/classes/com/neo/service/ACTSMethod.class" />
-      <change beforePath="$PROJECT_DIR$/target/docker/ACTS/result.txt" afterPath="$PROJECT_DIR$/target/docker/ACTS/result.txt" />
-      <change beforePath="$PROJECT_DIR$/target/docker/docker-acts-1.0.jar" afterPath="$PROJECT_DIR$/target/docker/docker-acts-1.0.jar" />
-      <change beforePath="$PROJECT_DIR$/target/docker/result.txt" afterPath="$PROJECT_DIR$/target/docker/result.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/docker/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="63" lean-forward="false" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
+            <state relative-caret-position="81">
+              <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -91,7 +84,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ACTSMethod.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ACTSMethod.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/neo/service/ACTSMethod.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="355">
@@ -172,13 +165,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/neo/domain/precondition.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neo/service/precondition.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neo/domain/TestSuite.java" />
-        <option value="$PROJECT_DIR$/src/main/docker/Dockerfile" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/ACTS/model.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/neo/domain/CTModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neo/service/ACTSMethod.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neo/controller/DockerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neo/config/CORSConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/docker/Dockerfile" />
       </list>
     </option>
   </component>
@@ -474,12 +467,12 @@
       <workItem from="1551772636079" duration="4162000" />
       <workItem from="1551860457769" duration="801000" />
       <workItem from="1551863141480" duration="1355000" />
-      <workItem from="1552284225095" duration="926000" />
+      <workItem from="1552284225095" duration="1093000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33112000" />
+    <option name="totallyTimeSpent" value="33279000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -964,14 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/docker/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="63" lean-forward="false" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ACTS/model.txt" />
     <entry file="file://$PROJECT_DIR$/ACTS/result.txt" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -1059,6 +1044,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/docker/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
